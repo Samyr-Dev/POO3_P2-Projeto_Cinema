@@ -1,102 +1,325 @@
-<<<<<<< HEAD
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 🎬 Projeto Cinema - POO3 (P2)
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![NestJS](https://img.shields.io/badge/Framework-NestJS-E0234E?logo=nestjs\&logoColor=white)
+![Prisma](https://img.shields.io/badge/ORM-Prisma-2D3748?logo=prisma\&logoColor=white)
+![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite\&logoColor=white)
+![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6?logo=typescript\&logoColor=white)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 📖 Sobre o Projeto
 
-## Description
+Este projeto consiste no desenvolvimento de uma API REST para gerenciamento de um sistema de cinema, criada como atividade da disciplina de Programação Orientada a Objetos III (POO3).
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+O sistema permite realizar operações de cadastro, consulta, atualização e remoção (CRUD) dos seguintes módulos:
 
-## Project setup
+* Cinema
+* Filme
+* Sala
+* Sessão
+* Ingresso
+* Lanche
+* Pedido
 
-```bash
-$ npm install
+A aplicação foi desenvolvida utilizando NestJS, Prisma ORM e SQLite.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* TypeScript
+* NestJS
+* Prisma ORM
+* SQLite
+* Node.js
+* Postman
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+src/
+├── cinema/
+├── filme/
+├── sala/
+├── sessao/
+├── ingresso/
+├── lanche/
+├── pedido/
+├── prisma/
+└── main.ts
 ```
 
-## Compile and run the project
+---
+
+## 🚀 Instalação
+
+Clone o repositório:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+git clone https://github.com/Samyr-Dev/POO3_P2-Projeto_Cinema.git
 ```
 
-## Run tests
+Entre na pasta do projeto:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+cd POO3_P2-Projeto_Cinema
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+Instale as dependências:
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+---
 
-## Resources
+## ▶️ Executando o Projeto
 
-Check out a few resources that may come in handy when working with NestJS:
+Inicie o servidor em modo de desenvolvimento:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```bash
+npm run start:dev
+```
 
-## Support
+A aplicação estará disponível em:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```text
+http://localhost:3001
+```
 
-## Stay in touch
+---
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 🗄️ Banco de Dados
 
-## License
+Executar migrations:
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-=======
-# CinemaP2
->>>>>>> 10084839375730c8c602ca376a30b9fa8a6aa52c
+```bash
+npx prisma migrate dev
+```
+
+Visualizar o banco utilizando Prisma Studio:
+
+```bash
+npx prisma studio --url file:./prisma/dev.db
+```
+
+---
+
+## 🔄 Fluxo Correto dos Testes
+
+Para evitar erros relacionados às chaves estrangeiras (Foreign Keys), recomenda-se seguir a seguinte ordem:
+
+1. Criar Cinema
+2. Criar Filme
+3. Criar Sala
+4. Criar Sessão
+5. Criar Lanche
+6. Criar Ingresso
+7. Criar Pedido
+
+---
+
+## 📬 Endpoints da API
+
+### 🏢 Cinema
+
+| Método | Endpoint    |
+| ------ | ----------- |
+| GET    | /cinema     |
+| GET    | /cinema/:id |
+| POST   | /cinema     |
+| PATCH  | /cinema/:id |
+| DELETE | /cinema/:id |
+
+Exemplo de criação:
+
+```json
+{
+  "nome": "Cine Goiânia Shopping",
+  "endereco": "Av. T-10, Setor Bueno"
+}
+```
+
+---
+
+### 🎬 Filme
+
+| Método | Endpoint   |
+| ------ | ---------- |
+| GET    | /filme     |
+| GET    | /filme/:id |
+| POST   | /filme     |
+| PATCH  | /filme/:id |
+| DELETE | /filme/:id |
+
+Exemplo de criação:
+
+```json
+{
+  "titulo": "Interestelar",
+  "diretor": "Christopher Nolan",
+  "duracao": 169,
+  "genero": "Ficção Científica"
+}
+```
+
+---
+
+### 🪑 Sala
+
+| Método | Endpoint  |
+| ------ | --------- |
+| GET    | /sala     |
+| GET    | /sala/:id |
+| POST   | /sala     |
+| PATCH  | /sala/:id |
+| DELETE | /sala/:id |
+
+Exemplo de criação:
+
+```json
+{
+  "capacidade": 150,
+  "tipoTela": "IMAX"
+}
+```
+
+---
+
+### ⏰ Sessão
+
+| Método | Endpoint    |
+| ------ | ----------- |
+| GET    | /sessao     |
+| GET    | /sessao/:id |
+| POST   | /sessao     |
+| PATCH  | /sessao/:id |
+| DELETE | /sessao/:id |
+
+Exemplo de criação:
+
+```json
+{
+  "dataHora": "2026-06-07T21:00:00.000Z",
+  "cinemaId": 1,
+  "filmeId": 1,
+  "salaId": 1
+}
+```
+
+---
+
+### 🎟️ Ingresso
+
+| Método | Endpoint      |
+| ------ | ------------- |
+| GET    | /ingresso     |
+| GET    | /ingresso/:id |
+| POST   | /ingresso     |
+| PATCH  | /ingresso/:id |
+| DELETE | /ingresso/:id |
+
+Exemplo de criação:
+
+```json
+{
+  "preco": 35.90,
+  "sessaoId": 1
+}
+```
+
+---
+
+### 🍿 Lanche
+
+| Método | Endpoint    |
+| ------ | ----------- |
+| GET    | /lanche     |
+| GET    | /lanche/:id |
+| POST   | /lanche     |
+| PATCH  | /lanche/:id |
+| DELETE | /lanche/:id |
+
+Exemplo de criação:
+
+```json
+{
+  "nome": "Combo Grande",
+  "preco": 29.90
+}
+```
+
+---
+
+### 🧾 Pedido
+
+| Método | Endpoint    |
+| ------ | ----------- |
+| GET    | /pedido     |
+| GET    | /pedido/:id |
+| POST   | /pedido     |
+| PATCH  | /pedido/:id |
+| DELETE | /pedido/:id |
+
+Exemplo de criação:
+
+```json
+{
+  "ingressoId": 1,
+  "lancheId": 1
+}
+```
+
+---
+
+## 📮 Collection Postman
+
+A collection utilizada durante os testes pode ser adicionada ao repositório na pasta:
+
+```text
+/COLLECTIONS_JSON-POSTMAN/{modúloDesejado}.postman_collection.json
+```
+
+Para utilizá-la:
+
+1. Abra o Postman.
+2. Clique em **Import**.
+3. Selecione o arquivo da collection.
+4. Execute os testes dos endpoints.
+
+---
+
+## 📊 Relacionamentos
+
+```text
+Cinema
+   │
+   └── Sessão ─── Filme
+         │
+         ├── Sala
+         │
+         └── Ingresso
+                 │
+                 └── Pedido
+                         │
+                         └── Lanche
+```
+
+---
+
+## 👨‍💻 Autores
+
+* Pedro Lucas Ramos
+* Samyr Silva
+
+---
+
+## 🔗 Repositório
+
+https://github.com/Samyr-Dev/POO3_P2-Projeto_Cinema
+
+---
+
+## 📄 Licença
+
+Este projeto foi desenvolvido para fins acadêmicos na disciplina de Programação Orientada a Objetos III (POO3).
