@@ -1,26 +1,27 @@
 import { Injectable } from '@nestjs/common';
-import { CreateFilmeDto } from './dto/create-filme.dto';
-import { UpdateFilmeDto } from './dto/update-filme.dto';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Injectable()
 export class FilmeService {
-  create(createFilmeDto: CreateFilmeDto) {
-    return 'This action adds a new filme';
+  constructor(private prisma: PrismaService) {}
+
+  create(createFilmeDto: any) {
+    return this.prisma.filme.create({ data: { ...createFilmeDto } });
   }
 
   findAll() {
-    return `This action returns all filme`;
+    return this.prisma.filme.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} filme`;
+    return this.prisma.filme.findUnique({ where: { id: Number(id) } });
   }
 
-  update(id: number, updateFilmeDto: UpdateFilmeDto) {
-    return `This action updates a #${id} filme`;
+  update(id: number, updateFilmeDto: any) {
+    return this.prisma.filme.update({ where: { id: Number(id) }, data: { ...updateFilmeDto } });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} filme`;
+    return this.prisma.filme.delete({ where: { id: Number(id) } });
   }
 }

@@ -1,26 +1,46 @@
 import { Injectable } from '@nestjs/common';
-import { CreateCinemaDto } from './dto/create-cinema.dto';
-import { UpdateCinemaDto } from './dto/update-cinema.dto';
+import { PrismaService } from '../prisma/prisma.service'; // <-- Importação do tipo essencial para o NestJS
 
 @Injectable()
 export class CinemaService {
-  create(createCinemaDto: CreateCinemaDto) {
-    return 'This action adds a new cinema';
+  // O NestJS precisa estritamente do tipo : PrismaService aqui para resolver a dependência
+  constructor(private prisma: PrismaService) { }
+
+  // C - CREATE (Criar)
+  create(createCinemaDto: any) { // Usamos 'any' aqui para ignorar o DTO vazio
+    return this.prisma.cinema.create({
+      data: {
+        ...createCinemaDto,
+      },
+    });
   }
 
+  // R - READ (Listar todos)
   findAll() {
-    return `This action returns all cinema`;
+    return this.prisma.cinema.findMany();
   }
 
+  // R - READ (Buscar por ID)
   findOne(id: number) {
-    return `This action returns a #${id} cinema`;
+    return this.prisma.cinema.findUnique({
+      where: { id: Number(id) },
+    });
   }
 
-  update(id: number, updateCinemaDto: UpdateCinemaDto) {
-    return `This action updates a #${id} cinema`;
+  // U - UPDATE (Atualizar)
+  update(id: number, updateCinemaDto: any) { // Usamos 'any' aqui também
+    return this.prisma.cinema.update({
+      where: { id: Number(id) },
+      data: {
+        ...updateCinemaDto,
+      },
+    });
   }
 
+  // D - DELETE (Excluir)
   remove(id: number) {
-    return `This action removes a #${id} cinema`;
+    return this.prisma.cinema.delete({
+      where: { id: Number(id) },
+    });
   }
 }

@@ -1,0 +1,18 @@
+Execução do programa:
+npm run start:dev
+
+Execução do prisma:
+npx prisma studio --url file:./prisma/dev.db
+
+🗺️ A Ordem Correta dos Testes (Fluxo Lógico)
+Para testar o seu CRUD sem tomar erro de chave estrangeira (Foreign Key), siga esta sequência:
+
+Primeiro: Crie um Cinema (ele é independente).
+
+Segundo: Crie um Filme e uma Sala (também são independentes).
+
+Terceiro: Crie a Sessão (passando o cinemaId, filmeId e salaId que você acabou de gerar nos passos anteriores).
+
+Quarto: Crie os Lanches (independente) e os Ingressos (vinculados à Sessão).
+
+Por último: Crie o Pedido (unindo o Ingresso e o Lanche).

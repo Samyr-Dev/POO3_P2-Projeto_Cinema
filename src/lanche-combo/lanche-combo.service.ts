@@ -1,26 +1,40 @@
 import { Injectable } from '@nestjs/common';
-import { CreateLancheComboDto } from './dto/create-lanche-combo.dto';
-import { UpdateLancheComboDto } from './dto/update-lanche-combo.dto';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Injectable()
 export class LancheComboService {
-  create(createLancheComboDto: CreateLancheComboDto) {
-    return 'This action adds a new lancheCombo';
+  constructor(private prisma: PrismaService) {}
+
+  create(createLancheComboDto: any) {
+    return this.prisma.lancheCombo.create({
+      data: {
+        ...createLancheComboDto,
+      },
+    });
   }
 
   findAll() {
-    return `This action returns all lancheCombo`;
+    return this.prisma.lancheCombo.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} lancheCombo`;
+    return this.prisma.lancheCombo.findUnique({
+      where: { id: Number(id) },
+    });
   }
 
-  update(id: number, updateLancheComboDto: UpdateLancheComboDto) {
-    return `This action updates a #${id} lancheCombo`;
+  update(id: number, updateLancheComboDto: any) {
+    return this.prisma.lancheCombo.update({
+      where: { id: Number(id) },
+      data: {
+        ...updateLancheComboDto,
+      },
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} lancheCombo`;
+    return this.prisma.lancheCombo.delete({
+      where: { id: Number(id) },
+    });
   }
 }
