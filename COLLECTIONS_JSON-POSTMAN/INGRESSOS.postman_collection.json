@@ -1,0 +1,140 @@
+{
+  "info": {
+    "_postman_id": "8beaf682-9c04-4385-9d8a-1ee7432d4649",
+    "name": "INGRESSOS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43094967",
+    "_collection_link": "https://go.postman.co/collection/43094967-8beaf682-9c04-4385-9d8a-1ee7432d4649?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Lista todos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/ingresso",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "ingresso"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criação",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"valorInteira\": 50,\r\n        \"valorMeia\": 25,\r\n        \"sessaoId\": 1,\r\n        \"pedidoId\": null\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/ingresso",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "ingresso"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lista por ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/ingresso/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "ingresso",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualização",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"valorInteira\": 150,\r\n        \"valorMeia\": 75,\r\n        \"sessaoId\": 1,\r\n        \"pedidoId\": null\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/ingresso/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "ingresso",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":1,\r\n  \"nome\": \"Cine Goiânia\",\r\n  \"endereco\": \"Av. T-10, Setor Bueno\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/ingresso/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "ingresso",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

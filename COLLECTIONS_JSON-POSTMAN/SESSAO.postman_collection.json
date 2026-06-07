@@ -1,0 +1,140 @@
+{
+  "info": {
+    "_postman_id": "dabc9de1-2ec5-4fbc-b46f-570b71b5bfaf",
+    "name": "SESSAO",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43094967",
+    "_collection_link": "https://go.postman.co/collection/43094967-dabc9de1-2ec5-4fbc-b46f-570b71b5bfaf?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Lista todos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/sessao",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sessao"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criação",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"horarioExibicao\": \"2026-06-07T23:51:00.012Z\",\r\n    \"filmeId\": 1,\r\n    \"salaId\": 2,\r\n    \"cinemaId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/sessao",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sessao"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lista por ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/sessao/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sessao",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualização",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n        \"horarioExibicao\": \"1970-01-01T00:00:00.120Z\",\r\n        \"filmeId\": 1,\r\n        \"salaId\": 2,\r\n        \"cinemaId\": 2\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/sessao/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sessao",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":1,\r\n  \"nome\": \"Cine Goiânia\",\r\n  \"endereco\": \"Av. T-10, Setor Bueno\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/sessao/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sessao",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

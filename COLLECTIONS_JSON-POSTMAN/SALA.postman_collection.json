@@ -1,0 +1,140 @@
+{
+  "info": {
+    "_postman_id": "02ed0286-6d82-4ecf-ba8f-af316539f940",
+    "name": "SALA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43094967",
+    "_collection_link": "https://go.postman.co/collection/43094967-02ed0286-6d82-4ecf-ba8f-af316539f940?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Lista todos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/sala",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sala"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criação",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"numero\": 156,\r\n    \"capacidade\": 200,\r\n    \"cinemaId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/sala",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sala"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lista por ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/sala/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sala",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualização",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"numero\": 9874,\r\n    \"capacidade\": 200,\r\n    \"cinemaId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/sala/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sala",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":1,\r\n  \"nome\": \"Cine Goiânia\",\r\n  \"endereco\": \"Av. T-10, Setor Bueno\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/sala/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sala",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

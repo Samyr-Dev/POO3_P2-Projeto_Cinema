@@ -1,0 +1,140 @@
+{
+  "info": {
+    "_postman_id": "9bc0dd91-a56c-47f0-ae4d-973daebd649d",
+    "name": "PEDIDO",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43094967",
+    "_collection_link": "https://go.postman.co/collection/43094967-9bc0dd91-a56c-47f0-ae4d-973daebd649d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Lista todos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/pedido",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "pedido"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criação",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "    {\r\n        \"qtdInteira\": 7,\r\n        \"qtdMeia\": 5,\r\n        \"valorTotal\": 1500\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/pedido",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "pedido"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lista por ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/pedido/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "pedido",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualização",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "    {\r\n        \"qtdInteira\": 3,\r\n        \"qtdMeia\": 2,\r\n        \"valorTotal\": 3000\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/pedido/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "pedido",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":1,\r\n  \"nome\": \"Cine Goiânia\",\r\n  \"endereco\": \"Av. T-10, Setor Bueno\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/pedido/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "pedido",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

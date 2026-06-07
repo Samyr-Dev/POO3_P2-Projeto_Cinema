@@ -1,0 +1,140 @@
+{
+  "info": {
+    "_postman_id": "619be782-92e6-4725-a3ba-2556ddbee088",
+    "name": "FILME",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43094967",
+    "_collection_link": "https://go.postman.co/collection/43094967-619be782-92e6-4725-a3ba-2556ddbee088?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Lista todos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/filme",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "filme"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criação",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cinemaId\": 2,\r\n    \"classificacao\": \"+18\",\r\n    \"dataFinalExibicao\": \"2026-01-01T00:00:02.026+00:00\",\r\n    \"dataInicioExibicao\": \"2026-01-01T00:00:02.026+00:00\",\r\n    \"duracao\": \"280\",\r\n    \"elenco\": \"Rafael buquerque\",\r\n    \"genero\": \"ação\",\r\n    \"sinopse\": \"Filme de ação com muita ação\",\r\n    \"titulo\": \"Copa do Brail\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/filme",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "filme"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lista por ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/filme/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "filme",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualização",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"titulo\": \"SuperNatioral\",\r\n    \"sinopse\": \"Filme de uns cara ai procurando algumas coisas com algumas pessoas\",\r\n    \"classificacao\": \"+18\",\r\n    \"duracao\": \"280\",\r\n    \"elenco\": \"uns cara ai\",\r\n    \"genero\": \"ação\",\r\n    \"dataInicioExibicao\": \"1970-01-01T00:00:02.026Z\",\r\n    \"dataFinalExibicao\": \"1970-01-01T00:00:02.026Z\",\r\n    \"cinemaId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/filme/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "filme",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":1,\r\n  \"nome\": \"Cine Goiânia\",\r\n  \"endereco\": \"Av. T-10, Setor Bueno\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/filme/{{id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "filme",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
